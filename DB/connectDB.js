@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const connectDB = () =>
-  mongoose.connect("mongodb://localhost/restapicp", () => {
+  mongoose.connect(process.env.mongoDB_URI, () => {
     try {
       console.log("the database is connected..");
     } catch (error) {
